@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Calculator</title>
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="calculator" name="calc">
+            <input type="text" readonly class="value" name="txt" id="value">
+
+            <span class="num clear" onclick="calc.txt.value = ''">AC</span>
+            <span class="num" onclick="document.calc.txt.value += '/'">/</span>
+            <span class="num" onclick="backSpace()" id="backspace"><i class="material-icons">&#xe14a;</i>            </span> 
+            
+            <span class="num" onclick="document.calc.txt.value += '7'">7</span>
+            <span class="num" onclick="document.calc.txt.value += '8'">8</span>
+            <span class="num" onclick="document.calc.txt.value += '9'">9</span>
+            <span class="num" onclick="document.calc.txt.value += '*'">*</span>
+
+
+            <span class="num" onclick="document.calc.txt.value += '4'">4</span>
+            <span class="num" onclick="document.calc.txt.value += '5'">5</span>
+            <span class="num" onclick="document.calc.txt.value += '6'">6</span>
+            <span class="num" onclick="document.calc.txt.value += '-'">-</span>
+
+            <span class="num" onclick="document.calc.txt.value += '1'">1</span>
+            <span class="num" onclick="document.calc.txt.value += '2'">2</span>
+            <span class="num" onclick="document.calc.txt.value += '3'">3</span>
+            <span class="num plus" onclick="document.calc.txt.value += '+'">+</span>
+
+
+            <span class="num" onclick="document.calc.txt.value += '0'">0</span>
+            <span class="num squared" onclick="document.calc.txt.value = eval(calc.txt.value * calc.txt.value)">&times;</span>
+            <span class="num" onclick="document.calc.txt.value += '.'">.</span>
+            <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+        </form>
+    </div>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15,
+            speed: 450,
+            glare: true,
+            "max-glare": 0.2,
+        });
+
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".container"));
+
+        // Backspace Button
+        var ans = document.getElementById("value")
+
+        function backSpace() {
+            ans.value = ans.value.slice(0, -1);
+        }
+
+        // Square The Number
+        function squareIt(value) {
+            return value ** 2;
+        }
+    </script>
+
+</body>
+
+</html>
