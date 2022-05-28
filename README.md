@@ -1,4 +1,4 @@
-# ➕ Glassmorphism Calculator
+# ➗ Glassmorphism Calculator
 
 This calculator is truly modern styled, simple and unique. I used HTML, CSS to design the front end of the calculator with tilt.js to give it a cool rotating effect. And used JavaScript to make the calculator perform mathematical calculations.
 
