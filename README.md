@@ -26,6 +26,12 @@ Contact me on the links below:
 * Version 1.0 (Current)
     * Initial Release
 
+## 🛠 Built With
+
+* HTML
+* SCSS / CSS
+* JavaScript
+
 ## ©️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
